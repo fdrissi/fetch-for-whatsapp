@@ -8,6 +8,6 @@ for i in range(65):
     html_page = urllib2.urlopen(req)
     soup = BeautifulSoup(html_page)
     links = []
-    for link in soup.findAll('a', attrs={'href': re.compile("^https://chat.whatsapp.com")}):
+    for link in soup.findAll('a', attrs={'href': re.compile("^https://chat.whatsapp.com")}): #change whatsatpp for what your look for
         links.append(link.get('href'))
    	print(links)
